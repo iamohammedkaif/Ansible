@@ -1,0 +1,25 @@
+
+
+---
+
+  - 
+    hosts : AppServer
+    user : ansibleadm
+    gather_facts : false
+
+    vars :
+      motd : "Message from playbook variable"
+    tasks :
+      - name : Configure a MOTD
+        copy :
+          content : "{{ motd }}"
+          dest : /etc/motd
+
+      - name : line insert
+        lineinfile : 
+            path : /etc/motd
+            line : 'Added New Line '
+            insertbefore : BOF
+
+
+...

@@ -1,0 +1,32 @@
+---
+- 
+  hosts : AppServer
+
+  vars_files :
+    - example4_vars.yml
+    
+  tasks :
+    - name : Test Dict Key Value 
+      debug : 
+        msg : result is {{ example_key }}
+
+    - name : Test Dict Key Value 
+      debug : 
+        msg : result is {{ inline_dict }}
+
+    - name : Test Dict Key Value 
+      debug : 
+        msg : result is {{ named_list }}
+    
+    - name : Test Dict Key Value 
+      debug : 
+        msg : result is {{ named_list.3 }}
+
+    - name : Test Dict Key Value 
+      debug : 
+        msg : result is {{ inline_named_list[2] }}
+
+    - name : Test Dict Key Value 
+      debug : 
+        msg : result is {{ inline_dict.dict_key }}
+...

@@ -1,0 +1,13 @@
+
+    inline_dict :
+         {dict_key : dict value , dict_key1 : dict value 1}
+
+    named_list :
+      - item1
+      - item2
+      - item3 
+      - item4
+
+    inline_named_list :
+      [item01, item02, item03, item04 ]  
+...

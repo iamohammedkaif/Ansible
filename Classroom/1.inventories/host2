@@ -1,0 +1,15 @@
+[centosgroup]
+centos1
+centos2 ansible_user=root
+centos3 
+192.168.0.122
+centos[4:200]
+192.168.[0:30].[0:255]
+
+
+
+[ubuntugroup]
+ubuntu1
+ubuntu2 ansible_become=true ansible_become_pass=osboxes.org
+ubuntu3
+coreserver[0:30].ibm.com

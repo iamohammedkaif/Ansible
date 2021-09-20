@@ -1,0 +1,17 @@
+[appgroup]
+node1 ansible_port=22
+
+
+[dbgroup]
+DBServer
+
+[linux:children]
+node1
+node2
+
+[linux:vars]
+ansible_user=controller
+
+
+
+

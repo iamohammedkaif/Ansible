@@ -1,0 +1,20 @@
+
+---
+  - hosts : AppServer
+    user : ansibleadm 
+    become : true 
+
+    vars : 
+      system_owner : vishymails
+      users : [user1, user2, ansibleadm]
+
+    tasks : 
+      - template : 
+          src : motd.j2
+          dest : /etc/motd
+          owner : root
+          group : root
+          mode : 0644
+...
+
+

@@ -1,0 +1,21 @@
+
+This is the system {{ ansible_hostname }}
+
+Today's Date is  : {{ ansible_date_time['date'] }}
+
+To get access ask {{ system_owner }} for access
+
+
+{#  If the hostname is AppServer, include a message -#}
+
+{% if ansible_hostname == "AppServer" -%}
+This is app server machine 
+
+{% endif -%}
+
+
+{% for myuser in users if not myuser == "ansibleadm"  %}
+
+{{loop.index}} - {{ myuser }}
+
+{%endfor%}
